@@ -34,15 +34,40 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Open Quartus Prime and create a new project for the JK flip-flop experiment.
 
+2.Add a Verilog HDL file and declare inputs J, K, Qt and output Y.
+
+3.Write the behavioral code using an assign statement: Y = J & ~Qt | ~K & Qt;.
+
+4.Compile the design to check for syntax errors and generate the RTL schematic.
+
+5.Create a testbench to apply different J, K, and Qt input combinations.
+
+6.Simulate the design, observe Y, and verify results against the JK flip-flop truth table
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by:N.lakshmi pranay
+RegisterNumber:25017706
 */
-
+```
+module exp7(J,K,Qt,Y);
+input J,K,Qt;
+output Y;
+assign Y = J & ~Qt | ~K & Qt;
+endmodule 
+```
 **RTL LOGIC FOR FLIPFLOPS**
+
+<img width="814" height="336" alt="image" src="https://github.com/user-attachments/assets/4521d6a5-2dc9-4f3e-8012-2f27089879e0" />
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+<img width="831" height="193" alt="image" src="https://github.com/user-attachments/assets/96d18319-061d-42f7-b16d-66f76c0ae3f9" />
+
+
 **RESULTS**
+
+The JK flip-flop code compiled and simulated successfully. The output Y matched the expected truth table behavior.
